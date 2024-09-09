@@ -24,7 +24,7 @@ module "s3-bucket" {
 }
 
 resource "aws_s3_bucket" "frontend" {
-  bucket        = var.s3_bucket_name #weupliftnyc-org
+  bucket        = var.s3_bucket_name
   force_destroy = true
 }
 
@@ -88,7 +88,7 @@ resource "aws_cloudfront_distribution" "s3_distribution" {
     prefix = "myprefix"
   }
 
-  aliases = [ "weupliftnyc.org.local" ]
+  aliases = [ "example.org.local" ]
 
   default_cache_behavior {
     allowed_methods = [ "DELETE", "GET", "HEAD", "OPTIONS", "PATCH", "POST", "PUT" ]
